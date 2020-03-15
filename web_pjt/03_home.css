@@ -1,0 +1,66 @@
+/* 03_home.css */
+/* 아래에 코드를 작성해 주세요. */
+header {
+  background-image: url("./images/header.jpg");
+  background-size: 100% 100%;
+  padding: 250px;
+}
+
+header div {
+  display: inline-block;
+}
+
+.header_text {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 10px 0;
+}
+
+p.button {
+  background-color: royalblue;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 16px auto;
+  width: 80px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+p.button:hover {
+  background-color: darkblue;
+  width: 80px;
+}
+
+header a:hover {
+  color: red;
+}
+
+section {
+  text-align: center;
+  font-size: 30px;
+}
+
+section p {
+  color: black;
+  font-size: 40px;
+}
+
+section div figure {
+  display: inline-block;
+  width: auto;
+}
+
+section div figure img {
+  width: 300px;
+  height: 300px;
+}
+
+section div {
+  margin-bottom: 80px;
+}

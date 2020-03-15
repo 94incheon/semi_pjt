@@ -1,0 +1,30 @@
+/* 04_community.css */
+/* 아래에 코드를 작성해 주세요. */
+div.main {
+    text-align: center;
+    width: 720px;
+    margin: 80px auto 0;
+}
+
+.main div h1 {
+    padding: 50px 0 0;
+}
+
+.main div hr {
+    border: 0;
+    height: 6px;
+    background-color: yellow;
+    width: 100px;
+}
+
+section article :nth-child(1) {
+    margin-top: 80px;
+    text-align: left;
+    font-size: large;
+}
+
+section article :nth-child(2) {
+    margin-top: 20px;
+    text-align: right;
+    font-size: medium;
+}
