@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<hr>
+<p> 너가 검색한 {{ text }} 이야.
+<div>
+  {% for image_url in images %}
+  <div>
+    <img src={{ image_url }}>
+  </div>
+  {% empty %}
+  <div>
+    <p> 검색 결과가 없어 미안... </p>
+  <div>
+  {% endfor %}
+</div>
+{% endblock content %}
