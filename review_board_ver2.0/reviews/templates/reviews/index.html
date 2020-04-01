@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center mt-5">게시글 목록<h1>
+<hr>
+
+{% for review in reviews %}
+<div class="row">
+  <div class="card text-white bg-secondary mb-3 col-12" >
+    <div class="card-header d-flex justify-content-between">
+      <div class="d-inline"> {{ review.pk }} </div>
+      <div class="d-inline" style="font-size: 20px"> 수정일:{{ review.updated_at }}<br> 작성일:{{ review.created_at }}</div>
+    </div>
+    <div class="card-body">
+      <h1 class="card-title"><a href="/reviews/detail/{{ review.pk }}" class="text-white">{{ review.title }}</a></h1>
+      <h5>{{ review.content }}</h5>
+    </div>
+  </div>
+</div>
+{% empty %}
+<h1>게시글이 없어요</h1>
+{% endfor %}
+{% endblock content %}

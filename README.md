@@ -8,6 +8,15 @@
 
 
 - `review_board`
+  
   - Django 를 사용해서 게시판 ( `CRUD` ) 구현
   - `orm` 사용
   - `sqlite3`
+  
+  
+
+- `review_board_ver2.0`
+  - 리뷰게시판ver1.0 을 다시 처음부터 제작함.
+  - `더 깔끔해진 코드`
+  - Crud 정확하게 나눔
+  - 게시판 처음부터 다시 제작해보았음
