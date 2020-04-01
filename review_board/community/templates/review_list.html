@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center mt-5">게시글 목록</h1>
+<button type="button" class="d-block btn btn-primary ml-auto mr-5">
+  <span><a href="/community/new_review" class="text-white">글쓰기</a></span>
+</button>
+<hr class="font-weight-bold mx-5">
+
+
+<!-- Cards_Reviews_lists -->
+<div class="container">
+  <div class="row">
+{% for review in reviews %}
+    <div class="card text-white bg-dark mb-3 col-12">
+      <div class="card-header">
+        {{ review.pk }}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><a href="/community/review_detail/{{ review.pk }}" style="color: white;">{{ review.title }}</a></h5> 
+        <p class="card-text">{{ review.content }}</p>
+        <p class="card-text text-right">{{ review.create_at }}</p>
+      </div>
+    </div>
+{% empty %}
+<h1> 게시글이 없습니다.</h1>
+{% endfor %}
+  </div>
+</div>
+
+{% endblock content %}

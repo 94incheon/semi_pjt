@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center mt-5">글 쓰기</h1>
+<hr class="font-weight-bold mx-5">
+
+<!-- form  -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <form action="/community/create_review/" method="get">
+        <div class="form-group">
+          <label for="title">제목</label>
+          <input type="text" class="form-control" id="title" name="title" placeholder="제목을 입력하세요.">
+        <div class="form-group">
+          <label for="content">내용</label>
+          <textarea class="form-control" id="content" name="content" rows="6"></textarea>
+        </div>
+        <div>
+          Rank<br>
+          <input type="number" name="rank">
+        </div>
+        <div>
+          <br>
+          <input type="submit" value="완료">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
