@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1 class="col-12 text-center mt-3">게시글 상세보기</h1>
+  <hr>
+
+  <!-- Card -->
+  <div class="card text-center">
+    <div class="card-header bg-dark text-white">
+      {{ review.title }}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ review.movie_title }}</h5>
+      <p class="card-text">{{ review.content }}</p>
+      <p> Rank : {{ review.rank }} </p>
+    </div>
+    <div class="card-footer text-white bg-dark">
+      작성일 : {{ review.created_at }}<br>
+      수정일 : {{ review.updated_at }}
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-end">
+    <a href="{% url 'community:review_update' review.pk %}" class="btn btn-primary">수정</a>
+    <form action="{% url 'community:review_delete' review.pk %}" method="post">
+      {% csrf_token %}
+      <input type="submit" class="btn btn-danger" value="삭제">
+    </form>
+  </div>
+{% endblock body %}

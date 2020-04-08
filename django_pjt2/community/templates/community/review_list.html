@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1 class="col-12 text-center mt-3">게시글 목록</h1>
+  <hr>
+  
+  <!-- Table -->
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Movie Title</th>
+        <th scope="col">Rank</th>
+        <th scope="col">Content</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for review in reviews %}
+        <tr>
+          <th scope="row">{{ review.pk }}</th>
+          <td><a href="{% url 'community:review_detail' review.pk %}">{{ review.title  }}</a></td>
+          <td>{{ review.movie_title  }}</td>
+          <td>{{ review.rank  }}</td>
+          <td>{{ review.content  }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+{% endblock body %}
