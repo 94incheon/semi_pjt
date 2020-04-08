@@ -20,3 +20,7 @@
   - `더 깔끔해진 코드`
   - Crud 정확하게 나눔
   - 게시판 처음부터 다시 제작해보았음
+  
+- `django_pjt2`
+  - django ModelForm 을 활용한 게시판 구성
+  - POST 방식의 http 요청 처리방법 정리
