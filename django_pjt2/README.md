@@ -545,13 +545,3 @@ def review_delete(request, pk):
 
 
 
-
-## 5. 프로젝트 질문
-
-1. `base.html` 에서 이미 CDN 을 사용하고 있을때.
-   - `Static` 폴더에 `bootstrap4` 넣어서 사용하려면 CDN 을 지워야하는지???
-   - `django-bootstrap4` 패키지를 이용하면 클래스를 주기위해서는 forloop 문으로 필드를 빼고
-     따로 클래스를 줘야하는지...????
-
-
-
