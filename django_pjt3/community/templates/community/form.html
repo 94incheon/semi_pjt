@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block body %}
+{% if request.resolver_match.url_name == 'create' %}
+<form action="{% url 'community:create' %}" method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <button class="btn btn-primary">제출</button>
+</form>
+
+{% else %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <button class="btn btn-primary">수정</button>
+    <button class="btn btn-danger">취소</button>
+</form>
+{% endif %}
+{% endblock %}

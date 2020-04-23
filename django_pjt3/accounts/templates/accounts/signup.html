@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+
+{% block body %}
+<form action="" method="post">
+  {% bootstrap_form form %}
+  {% csrf_token %}
+  <button class="btn btn-primary">회원가입</button>
+  <a href="{% url 'community:index' %}" class="btn btn-danger">취소</a>
+</form>
+{% endblock %}

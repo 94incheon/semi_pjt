@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load bootstrap4 %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Django Live Session</title>
+    {% bootstrap_css %}
+</head>
+<body>
+    {% if request.user.is_authenticated %}
+    <nav class="sticky-top navbar navbar-expand-sm navbar-light bg-light">
+      <a class="navbar-brand" href="#">{{ user.username }}님, 환영합니다.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a
+            class="nav-item nav-link"
+            href="{% url 'community:index' %}"
+            >전체 리뷰 목록</a
+          >
+          <a
+            class="nav-item nav-link"
+            href="{% url 'community:create' %}"
+            >리뷰 작성</a
+          >
+          <a
+            class="nav-item nav-link"
+            href="{% url 'accounts:logout' %}"
+            >로그아웃</a
+          >
+        </div>
+      </div>
+    </nav>
+    {% else %}
+    <nav class="sticky-top navbar navbar-expand-sm navbar-light bg-light">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a
+            class="nav-item nav-link"
+            href="{% url 'community:index' %}"
+            >전체 리뷰 목록</a
+          >
+          <a
+            class="nav-item nav-link"
+            href="{% url 'community:create' %}"
+            >리뷰 작성</a
+          >
+          <a
+            class="nav-item nav-link"
+            href="{% url 'accounts:login' %}"
+            >로그인</a
+          >
+          <a
+            class="nav-item nav-link"
+            href="{% url 'accounts:signup' %}"
+            >회원가입</a
+          >
+        </div>
+      </div>
+    </nav>
+    {% endif %}
+    <div class="container">
+        {% block body %}
+        {% endblock %}
+    </div>
+    {% bootstrap_javascript jquery='full' %}
+</body>
+</html>
