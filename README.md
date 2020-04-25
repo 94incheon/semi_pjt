@@ -24,3 +24,7 @@
 - `django_pjt2`
   - django ModelForm 을 활용한 게시판 구성
   - POST 방식의 http 요청 처리방법 정리
+
+- `django-pjt3`
+  - User 폼 사용.
+  - Accounts 장고가 가지고 있는 User모델 사용해서 로그인/로그아웃 구현
