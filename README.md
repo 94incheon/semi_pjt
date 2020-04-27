@@ -21,10 +21,23 @@
   - Crud 정확하게 나눔
   - 게시판 처음부터 다시 제작해보았음
   
+
+
+
 - `django_pjt2`
   - django ModelForm 을 활용한 게시판 구성
   - POST 방식의 http 요청 처리방법 정리
 
+
+
+
 - `django-pjt3`
   - User 폼 사용.
   - Accounts 장고가 가지고 있는 User모델 사용해서 로그인/로그아웃 구현
+
+
+
+- `vote_pjt1`
+  - 사용자 인증/권한 accounts 앱 구현
+  - 투표기능 votes 앱 구현
+  - 댓글에 남김에 따라서 퍼센트 다르게 표현 구현

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block body %}
+    <!--
+        분기의 기준은 url_name이다.
+        path로 하면, url이 바뀔 때마다 바꿔줘야한다.
+    -->
+    {% if request.resolver_match.url_name == 'create' %}
+        <h2>새 글쓰기</h2>
+    {% else %}
+        <h2>수정하기</h2>
+    {% endif %}
+
+    <!-- bootstrap4 활용 -->
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <!-- input type:submit -->
+        <button class="btn btn-primary">제출</button>
+    </form>
+    <hr>
+{% endblock %}

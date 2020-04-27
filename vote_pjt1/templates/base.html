@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load bootstrap4 %}
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0427 Workshop</title>
+  {% bootstrap_css %}
+</head>
+<body>
+  {% include '_navbar.html' %}
+  {% comment %} NavBar 아래에 메시지 출력  {% endcomment %}
+  {% bootstrap_messages %}
+
+  <div class="container">
+    {% block body %}
+    {% endblock %}
+  </div>
+
+  {% bootstrap_javascript jquery='full' %}
+</body>
+</html>

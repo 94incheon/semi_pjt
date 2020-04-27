@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1 class="text-center mt-5">투표 목록</h1>
+  <hr>
+  {% for vote in votes %}
+    <div class="card text-center">
+      <div class="card-header">
+        {{ vote.pk }}번글 작성자 : {{ vote.user.username }}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ vote.title }}</h5>
+        <p class="card-text">{{ vote.issue_a }} vs {{ vote.issue_b }}</p>
+        <a href="{% url 'votes:detail' vote.pk %}" class="btn btn-primary">Detail</a>
+      </div>
+      <div class="card-footer text-muted">
+        {{ vote.created_at }}
+      </div>
+    </div>
+    <br>
+  {% endfor %}
+{% endblock  %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block body %}
+  <h1 class="text-center mt-5"> 회원가입 </h1>
+  <hr>
+  <form action="" method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <button class="btn btn-primary">회원가입 신청</button>
+    <a href="{% url 'votes:index' %}">취소</a>
+  </form>
+{% endblock %}
