@@ -41,3 +41,7 @@
   - 사용자 인증/권한 accounts 앱 구현
   - 투표기능 votes 앱 구현
   - 댓글에 남김에 따라서 퍼센트 다르게 표현 구현
+
+- `django_pjt4`
+  - Heroku 배포하기
+  - https://aqueous-earth-03032.herokuapp.com/movies/
