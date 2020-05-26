@@ -44,4 +44,9 @@
 
 - `django_pjt4`
   - Heroku 배포하기
-  - https://aqueous-earth-03032.herokuapp.com/movies/
+  - [배포주소](https://aqueous-earth-03032.herokuapp.com/movies/)
+  
+  
+- 'django_pjt5'
+  - Heroku 배포하기
+  - [배포주소](https://double-manage.herokuapp.com/movies/)
